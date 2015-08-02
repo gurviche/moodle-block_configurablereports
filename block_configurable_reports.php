@@ -129,6 +129,7 @@ class block_configurable_reports extends block_list {
         return $this->content;
     }
 
+/*
     public function cron() {
         global $CFG, $DB;
 
@@ -142,7 +143,7 @@ class block_configurable_reports extends block_list {
 
         if ( ($crontime - $usertime) < 0 ) return false;
 
-        $lastcron = $DB->get_field('blocks', 'lastcron', array('name' => 'configurable_reports'));
+        $lastcron = $DB->get_field('block', 'lastcron', array('name' => 'configurable_reports'));
         if (!$lastcron and ($lastcron + $this->cron < time()) ) return false;
 
         // Starting to run...
@@ -152,9 +153,10 @@ class block_configurable_reports extends block_list {
         require_once($CFG->dirroot.'/blocks/configurable_reports/report.class.php');
         require_once($CFG->dirroot.'/blocks/configurable_reports/reports/sql/report.class.php');
 
-        //mtrace("\nConfigurable report (block)");
+        mtrace("\nConfigurable report (block)");
 
         $reports = $DB->get_records('block_configurable_reports');
+	$DB->execute("SET SESSION wait_timeout=28800");
         if ($reports) {
             foreach ($reports as $report) {
                 // Running only SQL reports. $report->type == 'sql'
@@ -182,5 +184,6 @@ class block_configurable_reports extends block_list {
         }
         return true; // Finished OK.
     }
+*/
 
 }
