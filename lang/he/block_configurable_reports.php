@@ -28,7 +28,7 @@ $string['contextnavbytags'] = 'סינון דוחות לפי רמה: ';
 $string['columncalculations'] = "חישובי עמודה";
 $string['newreport'] = "דוח חדש";
 $string['column'] = "עמודה";
-$string['confirmdeletereport'] = "האם אתה בטוח שברצונך למחוק את הדוח ?";
+$string['confirmdeletereport'] = "האם אתם בטוחים שברצונכם למחוק את הדוח ?";
 $string['noreportsavailable'] = "לא נמצאו דוחות";
 $string['downloadreport'] = "שמירת דוח במחשב";
 

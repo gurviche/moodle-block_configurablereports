@@ -26,7 +26,7 @@
 @media (min-width: 1220px) and (max-width: 1440px) {
 
     #page-blocks-configurable_reports-editreport.dir-rtl #fitem_id_querysql .ftextarea {
-        width: 90%;
+        width: 86%; /* to support TAU theme */
     }
 }
 /* Fix table header padding, to show "Sort" arrows
@@ -136,4 +136,4 @@
 
 #page-blocks-configurable_reports-managereport .contexttagsnav {margin-bottom: 20px;}
 
-.reportinfo {margin-top: 20px;}
+/*.reportinfo {margin-top: 20px;} */

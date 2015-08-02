@@ -25,7 +25,6 @@
     require_once("../../config.php");
 	require_once($CFG->dirroot."/blocks/configurable_reports/locallib.php");
 	require_once 'import_form.php';
-
 	$courseid = optional_param('courseid', SITEID, PARAM_INT);
     $showtags = optional_param('showtags', '', PARAM_RAW);
     $showcontexttags = optional_param('showcontexttags', '', PARAM_RAW);
@@ -242,7 +241,7 @@
                 }
                 $owner = get_string('createdby','block_configurable_reports', $owner);
                 if (!empty($download))
-                    $download = get_string('availabletodownloadas','block_configurable_reports', $download);
+                    $download = get_string('availabletodownloadas','block_configurable_reports', '<br>'.$download);
                 $courseentry .= html_writer::tag('div', $owner, array('class'=>'reportinfo'));
             $courseentry .= html_writer::end_tag('div');
 
